@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc 
+gcc -S $CFILE = compile.c -o compile.o 
