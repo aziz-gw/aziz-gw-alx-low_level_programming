@@ -2,26 +2,30 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - executes conditional statements
- * Return: return zero
+ * main - Entry point
+ * Description: print last digit of a number
+ * Return: always zero
  */
 int main(void)
 {
 	int n;
+	int last_digit;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+	last_digit = n % 10;
 
-	if (n%10 > 5)
+	if (last_digit > 5)
 	{
-		prinf("%d Last digit of %d and is greater than 5\n", n);
+		printf("Last digit of %d is %d and is greater than 5\n", n, last_digit);
 	}
-	else if (n%10 == 0)
+	else if (last_digit == 0)
 	{
-		print("%d Last digit of %d and is 0\n", n);
+		printf("Last digit of %d is %d and is 0\n", n, last_digit);
 	}
-	else if(n%10 < 6 && n%10 > 6)
+	else
 	{
-		printf("%d Last digit of %d and is less than 6 and 0\n", n)
+		printf("Last digit of %d is %d and is less than 6 and 0\n", n, last_digit);
+	}
 	return (0);
 }
