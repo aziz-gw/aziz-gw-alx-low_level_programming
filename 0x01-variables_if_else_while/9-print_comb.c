@@ -13,6 +13,10 @@ int main(void)
 	for (numCombo = 48; numCombo <= 57; numCombo++)
 	{
 		putchar(numCombo);
+		if (numCombo == 57)
+		{
+			continue;
+		}
 		putchar(',');
 		putchar(' ');
 	}
