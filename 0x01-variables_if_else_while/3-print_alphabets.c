@@ -1,14 +1,26 @@
+#include <stdio.h>
 /**
- *  * main - use of function putchar
- *   * Return - lowercase alphabet
- *    */
+ * main - Entry point
+ * Description: prints lowercase and then uppercase alphabets
+ * Return: always zero
+ */
 
 int main(void)
 {
-	char alphabet = ${a..z};
-	
-	putchar(alphabet);
-	
+	int asciiValueAlowercase = 97;
+	int asciiValueAuppercase = 65;
+
+	while (asciiValueAlowercase <= 122) /* 122 ascii value for lowercase z */
+	{
+		putchar(asciiValueAlowercase);
+		asciiValueAlowercase++;
+	}
+	while (asciiValueAuppercase <= 90) /* 90 ascii value for uppercase z */
+	{
+		putchar(asciiValueAuppercase);
+		asciiValueAuppercase++;
+	}
+	putchar('\n');
 	return (0);
 }
 
