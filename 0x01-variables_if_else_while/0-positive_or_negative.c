@@ -3,8 +3,9 @@
 #include <stdio.h>
 
 /**
- * main - executes conditional statements
- * Return: return zero
+ * main - Entry point
+ * Description: checks execution of postive or negative number
+ * Return: always zero
  */
 int main(void)
 {
