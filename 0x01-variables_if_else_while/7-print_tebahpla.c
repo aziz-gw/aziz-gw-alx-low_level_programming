@@ -1,16 +1,21 @@
 #include <stdio.h>
 
 /**
- * main - use of function putchar
- * Return - lowercase alphabet
+ * main - Entry point
+ * Description: prints lowercase alphabet in reverse
+ * Return: always zero
  */
 
 int main(void)
 {
-	char alphabet = ${a..z};
-	
-	putchar(alphabet);
+	int reverseAlpha = 122; /* lowercase z */
 
+	while (reverseAlpha >= 97)
+	{
+		putchar(reverseAlpha);
+		reverseAlpha--;
+	}
+	putchar('\n');
 	return (0);
 }
 
