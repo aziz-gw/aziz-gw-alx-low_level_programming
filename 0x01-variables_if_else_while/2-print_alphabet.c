@@ -1,15 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - use of function putchar
- * Return - lowercase alphabet
+ * main - Entry point
+ * Description: prints alphabet in lowercase
+ * Return: always zero
  */
 
 int main(void)
 {
-	char alphabet = ${a..z};
+	int asciiValueA = 97;
 
-	putchar(alphabet);
-
+	while (asciiValueA <= 122)
+	{
+		putchar(asciiValueA);
+		asciiValueA++;
+	}
+	putchar('\n');
 	return (0);
 }
