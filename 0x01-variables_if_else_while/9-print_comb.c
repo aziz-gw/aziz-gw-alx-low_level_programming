@@ -1,16 +1,22 @@
 #include <stdio.h>
 
 /**
- *  * main - use of function putchar
- *   * Return - lowercase alphabet
- *    */
+ * main - Entry point
+ * Description: print combination of numbers
+ * Return: lowercase alphabet
+ */
 
 int main(void)
 {
-	        char alphabet = ${a..z};
+	int numCombo;
 
-		        putchar(alphabet);
-
-			        return (0);
+	for (numCombo = 48; numCombo <= 57; numCombo++)
+	{
+		putchar(numCombo);
+		putchar(',');
+		putchar(' ');
+	}
+	putchar('\n');
+	return (0);
 }
 
