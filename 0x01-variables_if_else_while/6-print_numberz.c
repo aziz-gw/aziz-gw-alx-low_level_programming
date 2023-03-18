@@ -1,14 +1,19 @@
 #include <stdio.h>
+
 /**
- * main - use of function putchar
- * Return - lowercase alphabet
+ * main - Entry point
+ * Description: prints single digit numbers using putchar
+ * Return: always zero
  */
 
 int main(void)
 {
-	char alphabet = {0..9};
-	
-	putchar(alphabet);
+	int number;
 
+	for (number = 0; number <= 9; number++)
+	{
+		putchar(number + 48);
+	}
+	putchar('\n');
 	return (0);
 }
