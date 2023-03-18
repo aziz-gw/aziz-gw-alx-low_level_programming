@@ -1,26 +1,28 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 
 /**
- * main - conditional execution
- * Return - different n values
- * /
+ * main - executes conditional statements
+ * Return: return zero
+ */
 int main(void)
 {
-        int n;
+	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (rand() > 0) 
+	if (n > 0)
 	{
-		printf(n, "is positive %d\n");
+		printf("%d is positive", n);
 	}
-	else if (rand() == 0) 
+	else if (n == 0)
 	{
-		printf(n, "is zero %d\n");
+		printf("%d is zero\n", n);
 	}
-	else if (rand() < 0)
+	else
 	{
-		printf(n, "is positive %d\n");
+		printf("%d is negative\n", n);
+	}
 	return (0);
 }
