@@ -1,15 +1,18 @@
 #include <stdio.h>
 
 /**
- *  * main - use of function putchar
- *   * Return - lowercase alphabet
+ * main - Entry point
+ * Description: prints all single digit numbers of base 10
+ * Return: always zero
  */
-
 int main(void)
 {
-	int digit = {0..9};
+	int number;
 
-	printf("%d\n", digit);
-
+	for (number = 0; number <= 9; number++)
+	{
+		printf("%d\n", number);
+	}
+	printf("\n");
 	return (0);
 }
