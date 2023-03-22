@@ -13,18 +13,19 @@ void jack_bauer(void)
 	{
 		for (m1 = 0; m1 <= 9; m1++)
 		{
-			for (h2 = 0; h2 <= 5; h2++)
+			if ((h1 <= 1 && m1 <= 9) || (h1 <= 2 && m1 <= 3))
 			{
-				for (m2 = 0; m2 <= 9; m2++)
+				for (h2 = 0; h2 <= 5; h2++)
 				{
-					if (h1 >= 2 && m1 >= 4)
-						break;
-						_putchar(h1 + 48);
-						_putchar(m1 + 48);
+					for (m2 = 0; m2 <= 9; m2++)
+					{
+						_putchar(h1 + '0');
+						_putchar(m1 + '0');
 						_putchar(58);
-						_putchar(h2 + 48);
-						_putchar(m2 + 48);
-						_putchar('\n')
+						_putchar(h2 + '0');
+						_putchar(m2 + '0');
+						_putchar('\n');
+					}
 				}
 			}
 		}
