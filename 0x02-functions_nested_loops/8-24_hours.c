@@ -17,14 +17,14 @@ void jack_bauer(void)
 			{
 				for (m2 = 0; m2 <= 9; m2++)
 				{
-					if (a >= 2 && b >= 4)
+					if (h1 >= 2 && m1 >= 4)
 					{
 						break;
-						_putchar(a + 48);
-						_putchar(b + 48);
+						_putchar(h1 + 48);
+						_putchar(m1 + 48);
 						_putchar(58);
-						_putchar(c + 48);
-						_putchar(d + 48);
+						_putchar(h2 + 48);
+						_putchar(m2 + 48);
 						_putchar('\n')
 					}
 				}
