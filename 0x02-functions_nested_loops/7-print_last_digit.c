@@ -2,15 +2,15 @@
 
 /**
  * print_last_digit - prints last digit of a number
- * @int: integer
+ * @n: integer
  * Return: last digit
  */
 
-int print_last_digit(int)
+int print_last_digit(int n)
 {
 	int last;
 
-	last = int % 10;
+	last = n % 10;
 	if (last < 0)
 	{
 		_putchar(-last + 48);
