@@ -17,14 +17,14 @@ int main(void)
 	printf(("%ld", j);
 	else if (i == 1)
 	printf(", %ld", k);
-	}
 	else
 	{
 	k += j;
 	j = k - j;
 	printf(", %ld", k);
 	}
-	++1;
+	++i;
+	}
 	printf("\n");
 	return (0);
 }
