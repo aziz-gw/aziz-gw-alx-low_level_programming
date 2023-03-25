@@ -23,7 +23,7 @@ int main(void)
 		}
 		else if ((x % 3 == 0) && (x % 5 == 0))
 		{
-			printf("FizzBuzz %d\n", x);
+			printf("FizzBuzz");
 		}
 		else
 		{
@@ -36,5 +36,4 @@ int main(void)
 	}
 	printf("\n");
 	return (0);
-
 }
