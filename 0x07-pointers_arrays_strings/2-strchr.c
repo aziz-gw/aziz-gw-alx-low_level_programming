@@ -6,7 +6,7 @@
  * @c: char to locate
  * @s: string containg the char
  *
- * Return: c
+ * Return: pointer to the first occurence of char c
  */
 
 char *_strchr(char *s, char c)
@@ -19,8 +19,8 @@ char *_strchr(char *s, char c)
 		if (s[i] == c)
 		{
 			c_occur = &s[i];
-			break;
+			return (c_occur);
 		}
 	}
-	return (c_occur);
+	return (NULL);
 }
