@@ -2,17 +2,16 @@
 #include <string.h>
 
 /**
- *  * _strcat - concatenates two strings, dest and src
- *   * @dest: first string
- *    * @src: second string
- *     *
- *      * Return: dest
- *       */
+ * _strcat - concatenates two strings, dest and src
+ * @dest: first string
+ * @src: second string
+ *
+ * Return: dest
+ */
 
 char *_strcat(char *dest, char *src)
 {
-
-	        strcat(dest, src);
-		        return (dest);
+	strcat(dest, src);
+	return (dest);
 }
 

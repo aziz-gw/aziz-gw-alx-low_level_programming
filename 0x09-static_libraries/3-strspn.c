@@ -2,7 +2,8 @@
 
 /**
  * _strspn - gets length of a prefix substring
- * @s: string
+ * @s:first string
+ * @accept: second string
  *
  * Return: integer
  */
