@@ -11,7 +11,7 @@
 int main(int argc, __attribute__((unused)) char **argv)
 {
 
-	printf("%d", argc);
-	printf("\n");
+	int const n = 1;
+	printf("%d\n", argc - n);
 	return (0);
 }
