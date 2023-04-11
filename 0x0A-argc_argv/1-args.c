@@ -10,8 +10,9 @@
 
 int main(int argc, __attribute__((unused)) char **argv)
 {
-
 	int const n = 1;
-	printf("%d\n", argc - n);
+
+	printf("%d", argc - n);
+	printf("\n");
 	return (0);
 }
