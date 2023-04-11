@@ -10,12 +10,14 @@
 
 int main(__attribute__((unused)) int argc, char *argv[])
 {
-	int i = 0;
+	int i;
 
-	while (argv[i] != 0)
+	if (argc != 0)
 	{
-		printf("\n%s\n\n", argv[i]);
-		i++;
+		for (i = 0; i < argc; i++)
+		{
+			printf("\n%s\n\n", argv[i]);
+		}
 	}
 	return (0);
 }
