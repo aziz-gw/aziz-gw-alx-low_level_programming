@@ -16,7 +16,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 	{
 		for (i = 0; i < argc; i++)
 		{
-			printf("\n%s\n\n", argv[i]);
+			printf("%s\n\n", argv[i]);
 		}
 	}
 	return (0);
