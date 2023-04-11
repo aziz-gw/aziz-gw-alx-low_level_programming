@@ -2,15 +2,20 @@
 
 /**
  * main - entry point
- * @argc: argument count
- * @argv: argument vector
+ * @argc: arg count
+ * @argv: arg variable
  *
  * Return: always 0
  */
 
 int main(__attribute__((unused)) int argc, char *argv[])
 {
-
-	printf("%s\n", argv[0]);
+	int i;
+	
+	if (argc != 0)
+	{
+		for (i = 0; i < argc; i++)
+		printf("%s\n", argv[i]);
+	}
 	return (0);
 }
