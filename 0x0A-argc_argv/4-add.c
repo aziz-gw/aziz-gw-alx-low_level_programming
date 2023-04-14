@@ -13,6 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int a, b, result;
+
 	result = 0;
 
 	if (argc <= 1)
