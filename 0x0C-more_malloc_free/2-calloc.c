@@ -21,7 +21,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (ptr_arr == NULL)
 		return (NULL);
 	for (arr_index = 0; arr_index < nmemb; arr_index++)
-		memset(ptr_arr + (arr_index * size), 0, size);
+		memset(ptr_arr, 0, nmemb * size);
 
 	return (ptr_arr);
 }
