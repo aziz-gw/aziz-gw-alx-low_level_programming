@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - prints the name passed to the program
  * @argc: argument count
  * @argv: argument vector
  *
