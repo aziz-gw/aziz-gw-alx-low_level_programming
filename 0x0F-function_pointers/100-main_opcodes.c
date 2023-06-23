@@ -31,15 +31,9 @@ int main(int argc, char *argv[])
 	}
 
 	for (i = 0; i < bytes; i++)
-	{
-		if (i == bytes - 1)
-		{
-			printf("%02hhx\n", p_main[i]);
-			break;
-		}
+		printf("%02hhx\n", p_main[i]);
 
-		printf("%02hhx", p_main[i]);
-	}
+	printf("\n");
 
 	return (0);
 }
