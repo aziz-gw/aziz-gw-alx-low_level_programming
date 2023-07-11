@@ -7,14 +7,11 @@
  * main - copies the content of a file to another file
  * @argc: argument passed to the program
  * @argv: array of pointers to the arguments
- * @file: file buffer is storing chars
  *
  * Return: always 0
  */
 
-char *create_buff(char *file);
-void close_file(int fd);
-#define BUFF_SIZE 1024
+/* define BUFF_SIZE 1024 */
 
 int main(int argc, char *argv[])
 {
@@ -57,7 +54,6 @@ int main(int argc, char *argv[])
 	free(buff);
 	close_file(from);
 	close_file(to);
-
 	return (0);
 }
 
@@ -70,6 +66,8 @@ int main(int argc, char *argv[])
  *
  * Return: pointer to the allocated memory
  */
+
+char *create_buff(char *file);
 
 char *create_buff(char *file)
 {
@@ -94,6 +92,7 @@ char *create_buff(char *file)
  * Return: nothing
  */
 
+void close_file(int fd);
 void close_file(int fd)
 {
 	int c;
