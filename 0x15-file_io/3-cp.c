@@ -3,6 +3,9 @@
 #include <unistd.h>
 #include <fcntl.h>
 
+#define BUFF_SIZE 1024
+char *create_buff(char *file);
+void close_file(int fd);
 /**
  * main - copies the content of a file to another file
  * @argc: argument passed to the program
@@ -10,8 +13,6 @@
  *
  * Return: always 0
  */
-
-/* define BUFF_SIZE 1024 */
 
 int main(int argc, char *argv[])
 {
@@ -67,8 +68,6 @@ int main(int argc, char *argv[])
  * Return: pointer to the allocated memory
  */
 
-char *create_buff(char *file);
-
 char *create_buff(char *file)
 {
 	char *buff;
@@ -92,7 +91,6 @@ char *create_buff(char *file)
  * Return: nothing
  */
 
-void close_file(int fd);
 void close_file(int fd)
 {
 	int c;
