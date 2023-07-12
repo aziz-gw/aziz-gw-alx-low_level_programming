@@ -22,19 +22,19 @@ void display_version(unsigned char *e_ident);
 
 void check_elf(unsigned char *e_ident)
 {
-        int idx;
+	int idx;
 
-        for (idx = 0; idx < 4; idx++)
-        {
-                if (e_ident[idx] != 127 &&
-                    e_ident[idx] != 'E' &&
-                    e_ident[idx] != 'L' &&
-                    e_ident[idx] != 'F')
-                {
-                        dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
-                        exit(98);
-                }
-        }
+	for (idx = 0; idx < 4; idx++)
+	{
+		if (e_ident[idx] != 127 &&
+				e_ident[idx] != 'E' &&
+				e_ident[idx] != 'L' &&
+				e_ident[idx] != 'F')
+		{
+			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
+			exit(98);
+		}
+	}
 }
 
 /**
@@ -44,21 +44,21 @@ void check_elf(unsigned char *e_ident)
  * Return: nothing
  */
 
-void displaiy_magic(unsigned char *e_ident)
+void display_magic(unsigned char *e_ident)
 {
-        int idx;
+	int idx;
 
-        printf(" Magic: ");
+	printf(" Magic: ");
 
-        for (idx = 0; idx < EI_NIDENT; idx++)
-        {
-                printf("%02x", e_ident[idx]);
+	for (idx = 0; idx < EI_NIDENT; idx++)
+	{
+		printf("%02x", e_ident[idx]);
 
-                if (idx == EI_NIDENT - 1)
-                        printf("\n");
-                else
-                        printf(" ");
-        }
+		if (idx == EI_NIDENT - 1)
+			printf("\n");
+		else
+			printf(" ");
+	}
 }
 
 /**
@@ -67,22 +67,22 @@ void displaiy_magic(unsigned char *e_ident)
  */
 void display_class(unsigned char *e_ident)
 {
-        printf(" Class: ");
+	printf(" Class: ");
 
-        switch (e_ident[EI_CLASS])
-        {
-        case ELFCLASSNONE:
-                printf("none\n");
-                break;
-        case ELFCLASS32:
-                printf("ELF32\n");
-                break;
-        case ELFCLASS64:
-                printf("ELF64\n");
-                break;
-        default:
-                printf("<unknown: %x>\n", e_ident[EI_CLASS]);
-        }
+	switch (e_ident[EI_CLASS])
+	{
+	case ELFCLASSNONE:
+		printf("none\n");
+		break;
+	case ELFCLASS32:
+		printf("ELF32\n");
+		break;
+	case ELFCLASS64:
+		printf("ELF64\n");
+		break;
+	default:
+		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
+	}
 }
 
 /**
@@ -91,22 +91,22 @@ void display_class(unsigned char *e_ident)
  */
 void display_data(unsigned char *e_ident)
 {
-        printf(" Data: ");
+	printf(" Data: ");
 
-        switch (e_ident[EI_DATA])
-        {
-        case ELFDATANONE:
-                printf("none\n");
-                break;
-        case ELFDATA2LSB:
-                printf("2's complement, little endian\n");
-                break;
-        case ELFDATA2MSB:
-                printf("2's complement, big endian\n");
-                break;
-        default:
-                printf("<unknown: %x>\n", e_ident[EI_CLASS]);
-        }
+	switch (e_ident[EI_DATA])
+	{
+	case ELFDATANONE:
+		printf("none\n");
+		break;
+	case ELFDATA2LSB:
+		printf("2's complement, little endian\n");
+		break;
+	case ELFDATA2MSB:
+		printf("2's complement, big endian\n");
+		break;
+	default:
+		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
+	}
 }
 
 /**
@@ -116,16 +116,15 @@ void display_data(unsigned char *e_ident)
 
 void display_version(unsigned char *e_ident)
 {
-         printf(" Version: %d",
-                          e_ident[EI_VERSION]);
+	printf(" Version: %d", e_ident[EI_VERSION]);
 
-        switch (e_ident[EI_VERSION])
-        {
-        case EV_CURRENT:
-                printf(" (current)\n");
-                break;
-        default:
-                printf("\n");
-                break;
-        }
+	switch (e_ident[EI_VERSION])
+	{
+		case EV_CURRENT:
+			printf(" (current)\n");
+			break;
+		default:
+			printf("\n");
+			break;
+	}
 }
